@@ -11,7 +11,6 @@ public class T9_throw {
 		} finally {
 			System.out.println("작업끝...");
 		}
-
 	}
 
 	private static void findMethod() throws ClassNotFoundException {
