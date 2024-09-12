@@ -1,6 +1,6 @@
 package t11_interface.t04;
 
-public class Actor implements PoliceMan, FireMan, Cheif{
+public class Actor implements PoliceMan, FireMan, Chef {
 
 	@Override
 	public void pizza() {
@@ -8,7 +8,7 @@ public class Actor implements PoliceMan, FireMan, Cheif{
 	}
 
 	@Override
-	public void spagetii() {
+	public void spagetti() {
 		System.out.println("스파게티를 만들수 있습니다.");
 	}
 
@@ -19,7 +19,7 @@ public class Actor implements PoliceMan, FireMan, Cheif{
 
 	@Override
 	public void rescue() {
-		System.out.println("인명구조를 할수 있습니다.");
+		System.out.println("생명구조를 할수 있습니다.");
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class Actor implements PoliceMan, FireMan, Cheif{
 
 	@Override
 	public void search() {
-		System.out.println("물건을 찾을수 있습니다.");
+		System.out.println("물건을 찾아줄수 있습니다.");
 	}
 
 }

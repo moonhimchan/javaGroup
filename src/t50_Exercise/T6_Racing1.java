@@ -2,16 +2,16 @@ package t50_Exercise;
 
 import java.util.Scanner;
 
-public class T6_Racing {
+public class T6_Racing1 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		String horseName = "";
 		int bat = 0;
-		
+
 		System.out.println("* 당첨금은 배팅한 금액의 : 1등은 200%, 2등은 150%, 3등은 120%, 4등과 5등은 없습니다.");
 		System.out.print("배팅 금액을 입력하세요? ");
 		bat = sc.nextInt();
-		
+
 		int choice = 0;
 		while(true) {
 			System.out.println("==> 경주마를 선택하세요? ");
@@ -21,7 +21,7 @@ public class T6_Racing {
 			else break;
 		}
 		System.out.println();
-			
+
 		switch(choice) {
 			case 1:	horseName = "1번말(태양)"; break;
 			case 2:	horseName = "2번말(바람)"; break;
@@ -29,7 +29,7 @@ public class T6_Racing {
 			case 4:	horseName = "4번말(태권)"; break;
 			case 5:	horseName = "5번말(태풍)"; break;
 		}
-		
+
 		// 일반스레드 5개
 		Horse horse = new Horse(bat, horseName);
 		Thread horse1 = new Thread(horse, "1번말(태양)");
@@ -42,7 +42,7 @@ public class T6_Racing {
 		horse3.start();
 		horse4.start();
 		horse5.start();
-		
+
 		// main스레드가 모든 스레드가 종료될때까지 기다려준다.
 		try { 
 			horse1.join();
@@ -54,7 +54,7 @@ public class T6_Racing {
 			e.printStackTrace();
 		}
 		horse.total();
-		
+
 		sc.close();
 	}
 }
@@ -62,24 +62,24 @@ public class T6_Racing {
 class Horse extends Thread {
 	String horseName = "";
 	int bat = 0, cnt = 0;
-	
+
 	int targetNum = 100;	// 전체 완주거리
 	int sum = 0;
 	String[] finalHorse = new String[5];
-	
+
 	public Horse(int bat, String horseName) {
 		this.bat = bat;
 		this.horseName = horseName;
 	}
-	
+
 	@Override
 	public void run() {
 		String currentHorse = Thread.currentThread().getName();
-		
+
 		while(true) {
 			StringBuffer sb = new StringBuffer();
 			sum += (int)(Math.random()*5) + 1;
-			
+
 			for(int i=0; i<sum; i++) sb.append(">");
 			//System.out.println("sum : " + sum);
 			if(sum < targetNum) {
@@ -101,7 +101,7 @@ class Horse extends Thread {
 	public void total() {
 		int baedangkum;
 		String horseRank;
-		
+
 		System.out.println("================== 결  과 =================");
 		for(int i=0; i<finalHorse.length; i++) {
 			System.out.println((i+1)+"등 : " + finalHorse[i]);
@@ -127,7 +127,7 @@ class Horse extends Thread {
 			baedangkum = 0;
 			horseRank = "5등";
 		}
-		
+
 		System.out.println();
 		System.out.println("=======================================================");
 		System.out.println("당신이 배팅한 말 : " + horseName + " , 순위 : " + horseRank + " , 배팅한금액 : " + bat);

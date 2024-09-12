@@ -22,9 +22,8 @@ public class PoliceMan implements Action {
 	public void pizza() {}
 
 	@Override
-	public void spagetii() {}
+	public void spagetti() {}
 
-	
-	
+
 
 }

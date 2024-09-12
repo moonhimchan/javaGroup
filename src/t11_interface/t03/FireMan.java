@@ -10,7 +10,7 @@ public class FireMan implements Action {
 
 	@Override
 	public void fire() {
-		System.out.println("화제 진압을 합니다.");
+		System.out.println("화재 진압을 합니다.");
 	}
 
 	@Override
@@ -22,12 +22,6 @@ public class FireMan implements Action {
 	public void pizza() {}
 
 	@Override
-	public void spagetii() {}
-
-	@Override
-	public void person(String actor) {
-		// TODO Auto-generated method stub
-		
-	}
+	public void spagetti() {}
 
 }

@@ -1,11 +1,11 @@
 package t11_interface.t02;
 
-public class Airplane implements Toy {
-	private int age=16;
+public class Airplan implements Toy {
+	private int age = 16;
 
 	@Override
 	public void age() {
-		System.out.println(age+"세 이상만 사용하실수 있습니다.");
+		System.out.println(age + "세 이상만 사용하실수 있습니다.");
 	}
 
 	@Override
@@ -20,13 +20,12 @@ public class Airplane implements Toy {
 	}
 
 	@Override
-	public int possibleAge() {		
+	public int possibleAge() {
 		return age;
 	}
 
 	@Override
 	public void product(String name) {
-		System.out.println("장난감 이름 :" +name);
+		System.out.println("장난감 이름 : " + name);
 	}
-
 }

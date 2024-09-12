@@ -1,6 +1,6 @@
 package t11_interface.t03;
 
-public class Cheif implements Action {
+public class Chef implements Action {
 
 	@Override
 	public void catching() {}
@@ -20,13 +20,8 @@ public class Cheif implements Action {
 	}
 
 	@Override
-	public void spagetii() {
+	public void spagetti() {
 		System.out.println("스파게티 요리를 합니다.");
 	}
 
-	@Override
-	public void person(String actor) {
-		// TODO Auto-generated method stub
-		
-	}
 }

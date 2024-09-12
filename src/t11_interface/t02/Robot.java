@@ -1,11 +1,11 @@
 package t11_interface.t02;
 
 public class Robot implements Toy {
-	private int age=8;
+	private int age = 8;
 
 	@Override
 	public void age() {
-		System.out.println(age+"세 이상만 사용하실수 있습니다.");
+		System.out.println(age + "세 이상만 사용하실수 있습니다.");
 	}
 
 	@Override
@@ -22,13 +22,12 @@ public class Robot implements Toy {
 	public void misaile() {}
 
 	@Override
-	public int possibleAge() {		
+	public int possibleAge() {
 		return age;
 	}
 
 	@Override
 	public void product(String name) {
-		System.out.println("장난감 이름 :" +name);
+		System.out.println("장난감 이름 : " + name);
 	}
-
 }

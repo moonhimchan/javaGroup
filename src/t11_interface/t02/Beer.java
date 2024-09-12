@@ -1,7 +1,7 @@
 package t11_interface.t02;
 
 public class Beer implements Toy {
-	private int age=0;
+	private int age = 0;
 
 	@Override
 	public void age() {
@@ -20,13 +20,13 @@ public class Beer implements Toy {
 	public void misaile() {}
 
 	@Override
-	public int possibleAge() {		
+	public int possibleAge() {
 		return age;
 	}
 
 	@Override
 	public void product(String name) {
-		System.out.println("장난감 이름 :" +name);
+		System.out.println("장난감 이름 : " + name);
 	}
 
 }

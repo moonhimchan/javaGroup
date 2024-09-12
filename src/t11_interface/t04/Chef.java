@@ -1,6 +1,6 @@
 package t11_interface.t04;
 
-public interface Cheif {
+public interface Chef {
 	void pizza();
-	void spagetii();
+	void spagetti();
 }
