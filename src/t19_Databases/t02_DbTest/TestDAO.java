@@ -8,13 +8,13 @@ import java.sql.Statement;
 
 public class TestDAO {
 	Connection conn = null;
-	
+
 	String sql = "";
-	
+
 	public TestDAO() {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			
+
 			String url = "jdbc:mysql://localhost:3306/javagroup";
 			String user = "root";
 			String password = "1234";
@@ -40,7 +40,7 @@ public class TestDAO {
 			Statement stmt = conn.createStatement();
 			sql = "select * from test";
 			ResultSet rs = stmt.executeQuery(sql);
-			
+
 			// 출력
 			System.out.println("=======================================");
 			System.out.println("번호\t성명\t나이\t성별\t주소");
